@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Vim documentation: tags</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="help">
+<meta name="settings" content="no_progress,number_lines,ignore_folding,use_css,no_foldcolumn,expand_tabs,line_ids,ignore_conceal,prevent_copy=">
+<meta name="colorscheme" content="delek">
+<style type="text/css">
+<!--
+.MissingTag { background-color: black; color: white; }
+.EnglishTag { background-color: gray; color: white; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.LineNr { color: #008080; text-decoration: underline; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+/* function to open any folds containing a jumped-to line before jumping to it */
+function JumpToLine()
+{
+  var lineNum;
+  lineNum = window.location.hash;
+  lineNum = lineNum.substr(1); /* strip off '#' */
+
+  if (lineNum.indexOf('L') == -1) {
+    lineNum = 'L'+lineNum;
+  }
+  var lineElem = document.getElementById(lineNum);
+  /* Always jump to new location even if the line was hidden inside a fold, or
+   * we corrected the raw number to a line ID.
+   */
+  if (lineElem) {
+    lineElem.scrollIntoView(true);
+  }
+  return true;
+}
+if ('onhashchange' in window) {
+  window.onhashchange = JumpToLine;
+}
+
+-->
+</script>
+</head>
+<body onload='JumpToLine();'>
+Language: <a href="./tags.html">en</a> <a href="././tags.ja.html">ja</a>
+<a name="top"></a><h1>Vim documentation: tags</h1>
+<a href="./index.html">main help file</a>
+<hr>
+<pre id='vimCodeElement'>
+<span id="L1" class="LineNr">1 </span><a class="Identifier" href="././vim-efm-langserver-settings.ja.html#g:efm_langserver_settings#debug">g:efm_langserver_settings#debug</a>               vim-efm-langserver-settings.jax
+<span id="L2" class="LineNr">2 </span><a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings">vim-efm-langserver-settings</a>           vim-efm-langserver-settings.jax
+<span id="L3" class="LineNr">3 </span><a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-contents">vim-efm-langserver-settings-contents</a>          vim-efm-langserver-settings.jax
+<span id="L4" class="LineNr">4 </span><a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-interface">vim-efm-langserver-settings-interface</a>         vim-efm-langserver-settings.jax
+<span id="L5" class="LineNr">5 </span><a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-introduction">vim-efm-langserver-settings-introduction</a>              vim-efm-langserver-settings.jax
+<span id="L6" class="LineNr">6 </span><a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-setting">vim-efm-langserver-settings-setting</a>           vim-efm-langserver-settings.jax
+<span id="L7" class="LineNr">7 </span><a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-usage">vim-efm-langserver-settings-usage</a>             vim-efm-langserver-settings.jax
+<span id="L8" class="LineNr">8 </span><a class="Identifier" href="././vim-efm-langserver-settings.ja.html">vim-efm-langserver-settings.txt</a>               vim-efm-langserver-settings.jax
+<span id="L9" class="LineNr">9 </span> vim&#0058;ft=help:
+</pre>
+<hr>
+<a href="#top">top</a> - <a href="./index.html">main help file</a> - <a href="./tags.ja.html">tag index</a> <br>
+Language: <a href="./tags.html">en</a> <a href="././tags.ja.html">ja</a>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

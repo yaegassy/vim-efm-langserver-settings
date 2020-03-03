@@ -1,0 +1,153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Vim documentation: vim-efm-langserver-settings</title>
+<meta name="Generator" content="Vim/8.1">
+<meta name="plugin-version" content="vim8.1_v1">
+<meta name="syntax" content="help">
+<meta name="settings" content="no_progress,number_lines,ignore_folding,use_css,no_foldcolumn,expand_tabs,line_ids,ignore_conceal,prevent_copy=">
+<meta name="colorscheme" content="delek">
+<style type="text/css">
+<!--
+.MissingTag { background-color: black; color: white; }
+.EnglishTag { background-color: gray; color: white; }
+pre { font-family: monospace; color: #000000; background-color: #ffffff; }
+body { font-family: monospace; color: #000000; background-color: #ffffff; }
+* { font-size: 1em; }
+.LineNr { color: #008080; text-decoration: underline; }
+.Constant { color: #008000; text-decoration: underline; }
+.Ignore { color: #ffffff; }
+.PreProc { color: #c000c0; text-decoration: underline; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+/* function to open any folds containing a jumped-to line before jumping to it */
+function JumpToLine()
+{
+  var lineNum;
+  lineNum = window.location.hash;
+  lineNum = lineNum.substr(1); /* strip off '#' */
+
+  if (lineNum.indexOf('L') == -1) {
+    lineNum = 'L'+lineNum;
+  }
+  var lineElem = document.getElementById(lineNum);
+  /* Always jump to new location even if the line was hidden inside a fold, or
+   * we corrected the raw number to a line ID.
+   */
+  if (lineElem) {
+    lineElem.scrollIntoView(true);
+  }
+  return true;
+}
+if ('onhashchange' in window) {
+  window.onhashchange = JumpToLine;
+}
+
+-->
+</script>
+</head>
+<body onload='JumpToLine();'>
+Language: <a href="./vim-efm-langserver-settings.html">en</a> <a href="././vim-efm-langserver-settings.ja.html">ja</a>
+<a name="top"></a><h1>Vim documentation: vim-efm-langserver-settings</h1>
+<a href="./index.html">main help file</a>
+<hr>
+<pre id='vimCodeElement'>
+<span id="L1" class="LineNr"> 1 </span><a class="Constant" href="././vim-efm-langserver-settings.ja.html" name="vim-efm-langserver-settings.txt">vim-efm-langserver-settings.txt</a>       日本語ヘルプ
+<span id="L2" class="LineNr"> 2 </span>
+<span id="L3" class="LineNr"> 3 </span>Version :
+<span id="L4" class="LineNr"> 4 </span>Author  : Tsuyoshi CHO &lt;Tsuyoshi.CHO+develop@Gmail.com&gt;
+<span id="L5" class="LineNr"> 5 </span>License : MIT license  {{{
+<span id="L6" class="LineNr"> 6 </span>    Permission is hereby granted, free of charge, to any person obtaining
+<span id="L7" class="LineNr"> 7 </span>    a copy of this software and associated documentation files (the
+<span id="L8" class="LineNr"> 8 </span>    &quot;Software&quot;), to deal in the Software without restriction, including
+<span id="L9" class="LineNr"> 9 </span>    without limitation the rights to use, copy, modify, merge, publish,
+<span id="L10" class="LineNr">10 </span>    distribute, sublicense, and/or sell copies of the Software, and to
+<span id="L11" class="LineNr">11 </span>    permit persons to whom the Software is furnished to do so, subject to
+<span id="L12" class="LineNr">12 </span>    the following conditions:
+<span id="L13" class="LineNr">13 </span>    The above copyright notice and this permission notice shall be included
+<span id="L14" class="LineNr">14 </span>    in all copies or substantial portions of the Software.
+<span id="L15" class="LineNr">15 </span>
+<span id="L16" class="LineNr">16 </span>    THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS
+<span id="L17" class="LineNr">17 </span>    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+<span id="L18" class="LineNr">18 </span>    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+<span id="L19" class="LineNr">19 </span>    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+<span id="L20" class="LineNr">20 </span>    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+<span id="L21" class="LineNr">21 </span>    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+<span id="L22" class="LineNr">22 </span>    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+<span id="L23" class="LineNr">23 </span>}}}
+<span id="L24" class="LineNr">24 </span>
+<span id="L25" class="LineNr">25 </span><span class="PreProc">==============================================================================</span>
+<span id="L26" class="LineNr">26 </span>目次                                            <a class="Constant" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-contents" name="vim-efm-langserver-settings-contents">vim-efm-langserver-settings-contents</a>
+<span id="L27" class="LineNr">27 </span>
+<span id="L28" class="LineNr">28 </span>概要                            <a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-introduction">vim-efm-langserver-settings-introduction</a>
+<span id="L29" class="LineNr">29 </span>使い方                                                                                          <a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-usage">vim-efm-langserver-settings-usage</a>
+<span id="L30" class="LineNr">30 </span>インターフェイス                                        <a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-interface">vim-efm-langserver-settings-interface</a>
+<span id="L31" class="LineNr">31 </span>設定                            <a class="Identifier" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-setting">vim-efm-langserver-settings-setting</a>
+<span id="L32" class="LineNr">32 </span>  g:efm_langserver_settings#debug <a class="Identifier" href="././vim-efm-langserver-settings.ja.html#g:efm_langserver_settings#debug">g:efm_langserver_settings#debug</a>
+<span id="L33" class="LineNr">33 </span>
+<span id="L34" class="LineNr">34 </span>
+<span id="L35" class="LineNr">35 </span><span class="PreProc">==============================================================================</span>
+<span id="L36" class="LineNr">36 </span>概要                                            <a class="Constant" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-introduction" name="vim-efm-langserver-settings-introduction">vim-efm-langserver-settings-introduction</a>
+<span id="L37" class="LineNr">37 </span>
+<span id="L38" class="LineNr">38 </span><a class="Constant" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings" name="vim-efm-langserver-settings">vim-efm-langserver-settings</a> は efm-langserver
+<span id="L39" class="LineNr">39 </span>(<span class="Constant"><a href="https://github.com/mattn/efm-langserver">https://github.com/mattn/efm-langserver</a></span>) を lsp クライアント下で自動的に有効
+<span id="L40" class="LineNr">40 </span>にして活用することを目的としたプラグインです
+<span id="L41" class="LineNr">41 </span>
+<span id="L42" class="LineNr">42 </span>このプラグインは mattn/vim-lsp-settings
+<span id="L43" class="LineNr">43 </span>(<span class="Constant"><a href="https://github.com/mattn/vim-lsp-settings">https://github.com/mattn/vim-lsp-settings</a></span>) に触発されて開発中です。
+<span id="L44" class="LineNr">44 </span>
+<span id="L45" class="LineNr">45 </span>最新版:
+<span id="L46" class="LineNr">46 </span><span class="Constant"><a href="https://github.com/tsuyoshicho/vim-efm-langserver-settings.vim">https://github.com/tsuyoshicho/vim-efm-langserver-settings.vim</a></span>
+<span id="L47" class="LineNr">47 </span>
+<span id="L48" class="LineNr">48 </span>
+<span id="L49" class="LineNr">49 </span><span class="PreProc">==============================================================================</span>
+<span id="L50" class="LineNr">50 </span>使い方                                                                                                                                                                                                                                                                                                          <a class="Constant" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-usage" name="vim-efm-langserver-settings-usage">vim-efm-langserver-settings-usage</a>
+<span id="L51" class="LineNr">51 </span>
+<span id="L52" class="LineNr">52 </span>プラグインマネージャの設定に沿ってインストールしてください。
+<span id="L53" class="LineNr">53 </span>
+<span id="L54" class="LineNr">54 </span>現在、以下の lsp クライアントと連携して動作します:
+<span id="L55" class="LineNr">55 </span>
+<span id="L56" class="LineNr">56 </span>- vim-lsp (<span class="Constant"><a href="https://github.com/prabirshrestha/vim-lsp">https://github.com/prabirshrestha/vim-lsp</a></span>)
+<span id="L57" class="LineNr">57 </span>- ale (<span class="Constant"><a href="https://github.com/dense-analysis/ale">https://github.com/dense-analysis/ale</a></span>)
+<span id="L58" class="LineNr">58 </span>- coc.nvim (<span class="Constant"><a href="https://github.com/neoclide/coc.nvim">https://github.com/neoclide/coc.nvim</a></span>)
+<span id="L59" class="LineNr">59 </span>
+<span id="L60" class="LineNr">60 </span>サポートするコマンドは README を見てください。
+<span id="L61" class="LineNr">61 </span>
+<span id="L62" class="LineNr">62 </span>
+<span id="L63" class="LineNr">63 </span><span class="PreProc">==============================================================================</span>
+<span id="L64" class="LineNr">64 </span>インターフェイス                                                                                                                                                        <a class="Constant" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-interface" name="vim-efm-langserver-settings-interface">vim-efm-langserver-settings-interface</a>
+<span id="L65" class="LineNr">65 </span>
+<span id="L66" class="LineNr">66 </span>ありません。
+<span id="L67" class="LineNr">67 </span>
+<span id="L68" class="LineNr">68 </span>
+<span id="L69" class="LineNr">69 </span><span class="PreProc">==============================================================================</span>
+<span id="L70" class="LineNr">70 </span>設定                                            <a class="Constant" href="././vim-efm-langserver-settings.ja.html#vim-efm-langserver-settings-setting" name="vim-efm-langserver-settings-setting">vim-efm-langserver-settings-setting</a>
+<span id="L71" class="LineNr">71 </span>
+<span id="L72" class="LineNr">72 </span>
+<span id="L73" class="LineNr">73 </span>g:efm_langserver_settings#debug                 <a class="Constant" href="././vim-efm-langserver-settings.ja.html#g:efm_langserver_settings#debug" name="g:efm_langserver_settings#debug">g:efm_langserver_settings#debug</a>
+<span id="L74" class="LineNr">74 </span>    Type: <a href="https://www.google.com/search?q=vim+%22Number%22&lr=lang_ja"><span class="MissingTag">Number</span></a>
+<span id="L75" class="LineNr">75 </span>    Default: <span class="Comment">0</span>
+<span id="L76" class="LineNr">76 </span>
+<span id="L77" class="LineNr">77 </span>    1を設定すると efm-langserver のログ出力を有効にします。
+<span id="L78" class="LineNr">78 </span>    現在ログファイルは &quot;~/efm-langserver.log&quot; 固定です。
+<span id="L79" class="LineNr">79 </span>
+<span id="L80" class="LineNr">80 </span>TODO:
+<span id="L81" class="LineNr">81 </span>    ログファイル
+<span id="L82" class="LineNr">82 </span>    設定ファイル(指定、ユーザーデフォルト)
+<span id="L83" class="LineNr">83 </span>    の設定を実装する予定
+<span id="L84" class="LineNr">84 </span>
+<span id="L85" class="LineNr">85 </span>
+<span id="L86" class="LineNr">86 </span><span class="PreProc">==============================================================================</span>
+<span id="L87" class="LineNr">87 </span>vim:tw=78:ts=8:ft=help:norl:noet:fen:
+</pre>
+<hr>
+<a href="#top">top</a> - <a href="./index.html">main help file</a> - <a href="./tags.ja.html">tag index</a> <br>
+Language: <a href="./vim-efm-langserver-settings.html">en</a> <a href="././vim-efm-langserver-settings.ja.html">ja</a>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
